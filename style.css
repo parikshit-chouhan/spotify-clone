@@ -1,0 +1,302 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    /* overflow is pro */
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    padding: .5rem;
+}
+
+/* child of main */
+.sidebar {
+    /* background-color: #121212; */
+    width: 340px;
+    /*16px */
+    border-radius: 1rem;
+    margin-right: .5rem;
+}
+
+/* child of main */
+.main-content {
+    background-color: #121212;
+    flex: 1;
+    /*16px */
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0 1.5rem;
+    /* margin-right: 10px; */
+
+}
+
+/* child of main */
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.album {
+    width: 25%;
+}
+
+.player {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-control {
+    display: flex;
+    align-items: center;
+}
+
+.playback-bar {
+    display: flex;
+    align-items: center;
+}
+
+.player-control img {
+    height: 1rem;
+    margin: 0 1rem;
+    opacity: .7;
+    /* padding: .7rem; */
+}
+
+.player-control img:hover {
+    opacity: 1;
+}
+
+
+.control {
+    width: 25%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.progress-bar {
+    width: 30em;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    height: .2rem;
+    border-radius: 10px;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+/* child of sidebar */
+.nav {
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+
+/* child of nav */
+.nav-option {
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.3rem .75rem;
+}
+
+/* child of nav-option */
+.nav-option i {
+    font-size: 1.25rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.library {
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+/* child of library */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* child of options */
+.lib-options img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icon {
+    font-size: 1.25rem;
+    display: flex;
+}
+
+/* child of icons */
+.icon i {
+    opacity: .7;
+    margin-right: 1rem;
+}
+
+.box {
+    height: 8rem;
+    background-color: #232323;
+    border-radius: .8rem;
+    margin: 1.75rem 0;
+    padding: .75rem 1rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-p2 {
+    font-size: .75rem;
+    opacity: .8;
+}
+
+.badge {
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: .25rem 1rem;
+    font-weight: 700;
+    margin-top: .5rem;
+    font-size: .85rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+.dark-badge {
+    background-color: black;
+    color: white;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 1;
+}
+
+.sticky-nav-icon {
+    margin-left: 1rem;
+}
+
+.sticky-nav-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+
+.card {
+    background-color: #232323;
+    width: 150px;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: .8rem;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-info {
+    font-size: .80rem;
+    opacity: .7;
+}
+
+.footer {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.line {
+
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: .6;
+}
+
+
+
+/* hover effect */
+.nav-option:hover {
+    opacity: 1;
+}
+
+.icon i:hover {
+    opacity: 1;
+}
+
+/*media querys*/
+@media(max-width:1000px) {
+    .hide {
+        display: none;
+    }
+}
+
+@media(max-width:375px) {
+    .sidebar {
+        display: none;
+    }
+}
